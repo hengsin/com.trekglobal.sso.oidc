@@ -24,8 +24,8 @@
  **********************************************************************/
 package com.trekglobal.sso.oidc.factory;
 
-import org.adempiere.base.sso.ISSOPrincipalService;
 import org.adempiere.base.sso.ISSOPrincipalFactory;
+import org.adempiere.base.sso.ISSOPrincipalService;
 import org.compiere.model.I_SSO_PrincipalConfig;
 import org.osgi.service.component.annotations.Component;
 
@@ -35,7 +35,7 @@ import com.trekglobal.sso.oidc.service.OIDCPrincipalService;
  * Factory for OIDC principal service
  * @author hengsin
  */
-@Component(immediate = true, service = ISSOPrincipalFactory.class, property = {"service.ranking:Integer=0"})
+@Component(immediate = true, service = org.adempiere.base.sso.ISSOPrincipalFactory.class, property = {"service.ranking:Integer=0"})
 public class OIDCServiceFactory implements ISSOPrincipalFactory {
 
 	/** SSO provider id for OIDC */
