@@ -156,9 +156,6 @@ public class OIDCPrincipalService implements ISSOPrincipalService {
 		TokenResponse tokenResponse = issueTokenRequest(authorizationGrant);
 
 		processTokenResponse(request, tokenResponse, true);
-		
-		String requestURL = request.getRequestURL().toString();
-		response.sendRedirect(requestURL);
 	}
 
 	/**
